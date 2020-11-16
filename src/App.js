@@ -2,7 +2,7 @@ import React,{ useState } from 'react'
 import './App.css';
 const api = {
   key:'7143fa965bedea1a40a989db39ba01cc',
-  base: "https://api.openweathermap.org/data/2.5/"
+  base: "https://api.openweathermap.org/data/2.5/"  
 }
 
 function App() {
@@ -42,16 +42,21 @@ function App() {
             onKeyPress={search}
             />
         </div>
-        <div className="location-box">
-          <div className="location">Pune, India</div>
-          <div className="date">{dateBuilder(new Date())}</div>
+        {(typeof weather.main != "undefined") ?(
+        <div>
+         <div className="location-box">
+         <div className="location">{weather.name},{weather.sys.country}</div>
+         <div className="date">{dateBuilder(new Date())}</div>
         </div>
         <div className="weather-box">
           <div className="temp">
-              15°C
+            {weather.main.temp}°C
           </div>
-          <div className="weather">Sunny</div>
+       
+        <div className="weather">{weather.weather[0].description}</div>
         </div>
+        </div>
+        ) :('')}
       </main>
 
     </div>
