@@ -11,7 +11,10 @@ body{
   background-size: contain;
   background-position:auto;
   transition: 0.4 ease-out;
-
+  font-size: 30px;
+  text-align: center;
+  color:#FFF ;
+ 
 }
 .app.warm{
   background-image: url('./assets/warm-bg.jpg');
@@ -44,9 +47,9 @@ main{
   box-shadow: 0px 5px rgba(0,0,0,0.2);
 
   color:#313131;
-  font-size:15px;
+  font-size:17px;
 
-  transition: 0.4s ease;
+  
 }
 .search-box .search-bar:focus{
   background-color: rgba(255,255,255,0.75);
@@ -77,7 +80,7 @@ main{
 }
 .weather-box .temp{
   position: relative;
-  color:#FFF;
+  color:#fff;
   text-align: center;
   font-family:'Verdana', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 50px;
