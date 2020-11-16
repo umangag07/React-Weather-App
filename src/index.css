@@ -71,8 +71,9 @@ main{
 .weather-box{
   background-color: rgba(255,255,255,0.2);
   margin-top: 30px;
-  border-radius: 20px 20px 1px 1px;
+  border-radius: 20px 20px 20px 20px;
   padding: 20px;
+  box-shadow: 8px 10px rgba(0,0,0,0.2) ;
 }
 .weather-box .temp{
   position: relative;
@@ -85,8 +86,10 @@ main{
 }
 .weather-box .weather{
   color:#FFF;
+  margin:5px;
   text-align: center;
-  font-size: 40px;
+  font-size: 35px;
   font-family:'sans-serif', Tahoma, Geneva, Verdana, sans-serif;
-  letter-spacing: 5px;
+  text-shadow: 3px 3px rgba(0,0,0,0.2) ;
+  
 }
