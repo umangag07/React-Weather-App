@@ -27,7 +27,7 @@ function App() {
             />
         </div>
         <div className="location-box">
-          <div className="loaction">Pune, India</div>
+          <div className="location">Pune, India</div>
           <div className="date">{dateBuilder(new Date())}</div>
         </div>
         <div className="weather-box">
