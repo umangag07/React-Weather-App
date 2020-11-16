@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{ useState } from 'react'
 import './App.css';
 const api = {
   key:'7143fa965bedea1a40a989db39ba01cc',
@@ -6,7 +6,16 @@ const api = {
 }
 
 function App() {
+  const [query,setQuery] = useState('');
+  const [weather, setWeather] = useState({}); 
 
+  const search = evt =>{
+     if (evt.key == "Enter"){
+       fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
+       .then(res => res.json())
+       .then(result =>setWeather(result))
+     }
+  }
   const dateBuilder =(d)=>{
     let months = ["january","February","March","April","May","June","July","August","September","October","Novemebr","December"];
     let days = ["Monday", "Tuesday", "Wednesday", "Thrusday", "Friday", "Saturday", "Sunday"];
